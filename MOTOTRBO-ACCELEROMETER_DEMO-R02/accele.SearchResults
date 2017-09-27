@@ -1,0 +1,4 @@
+---- XNL_CONNECTED Matches (3 in 2 files) ----
+XNL.c (accelerometer_demo\src):	    theXNL_Ctrlr.XNL_State = XNL_CONNECTED;
+XNL.c (accelerometer_demo\src):  case XNL_CONNECTED:
+XNL.h (accelerometer_demo\src):  XNL_CONNECTED

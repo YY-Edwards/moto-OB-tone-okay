@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "accelerometer_demo", "accelerometer_demo\accelerometer_demo.cproj", "{3A86B714-4CBE-4378-BE2C-26EC58799E89}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A86B714-4CBE-4378-BE2C-26EC58799E89}.Debug|AVR.ActiveCfg = Debug|AVR
+		{3A86B714-4CBE-4378-BE2C-26EC58799E89}.Debug|AVR.Build.0 = Debug|AVR
+		{3A86B714-4CBE-4378-BE2C-26EC58799E89}.Release|AVR.ActiveCfg = Release|AVR
+		{3A86B714-4CBE-4378-BE2C-26EC58799E89}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

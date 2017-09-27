@@ -1,0 +1,656 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+intDuration         0x4               src/XNL.o
+theRxMediaCtrlr     0x10              src/XNL.o
+accstatus           0x4               src/accelerometer.o
+BufferIndex         0x1               src/XNL.o
+devflag             0x1               src/XNL.o
+accelerometerIndex  0x4               src/accelerometer.o
+RxMediaBuffer       0x2800            src/XNL.o
+bunchofrandomstatusflags
+                    0x4               src/XNL.o
+filterresults       0xc               src/accelerometer.o
+TxBlockReservation  0x10              src/XNL.o
+accsamples          0x40              src/accelerometer.o
+intStartCount       0x4               src/XNL.o
+theRxCirBuffer      0x1000            src/XNL.o
+theRxCirCtrlr       0x18              src/XNL.o
+theXNL_Ctrlr        0x14              src/XNL.o
+TxInstancePool      0x80              src/XNL.o
+RxBuffer            0x20              src/XNL.o
+TxBufferPool        0x1000            src/XNL.o
+TxBuffer            0x20              src/XNL.o
+txSchedule          0x20              src/XNL.o
+oldresults          0xc               src/accelerometer.o
+DontPanic           0x1               src/XNL.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 src/accelerometer.o
+ .data          0x00000000        0x0 src/accelerometer.o
+ .bss           0x00000000        0x0 src/accelerometer.o
+ .debug_abbrev  0x00000000      0x24a src/accelerometer.o
+ .debug_info    0x00000000      0xf0d src/accelerometer.o
+ .debug_line    0x00000000      0x186 src/accelerometer.o
+ .text.wearenottilted
+                0x00000000       0x34 src/accelerometer.o
+ .text.filter   0x00000000       0x54 src/accelerometer.o
+ .text.my_writeabyte
+                0x00000000       0x2c src/accelerometer.o
+ .text.my_readabyte
+                0x00000000       0x3e src/accelerometer.o
+ .text.accelerometer_init
+                0x00000000       0x9c src/accelerometer.o
+ .text.processAccelerometer
+                0x00000000       0xfc src/accelerometer.o
+ .text.processDoubleClick
+                0x00000000       0x10 src/accelerometer.o
+ .rodata.filtercoffs
+                0x00000000       0x40 src/accelerometer.o
+ .debug_frame   0x00000000       0xac src/accelerometer.o
+ .debug_loc     0x00000000       0xc0 src/accelerometer.o
+ .debug_pubnames
+                0x00000000       0xff src/accelerometer.o
+ .debug_aranges
+                0x00000000       0x50 src/accelerometer.o
+ .debug_ranges  0x00000000       0x48 src/accelerometer.o
+ .debug_str     0x00000000      0x7b7 src/accelerometer.o
+ .comment       0x00000000       0x31 src/accelerometer.o
+ COMMON         0x00000000       0x60 src/accelerometer.o
+ .text          0x00000000        0x0 src/exception.o
+ .data          0x00000000        0x0 src/exception.o
+ .bss           0x00000000        0x0 src/exception.o
+ .text          0x00000000        0x0 src/my_INTC.o
+ .data          0x00000000        0x0 src/my_INTC.o
+ .bss           0x00000000        0x0 src/my_INTC.o
+ .text          0x00000000        0x0 src/XNL.o
+ .data          0x00000000        0x0 src/XNL.o
+ .bss           0x00000000        0x0 src/XNL.o
+ .rodata.authDelta
+                0x00000000        0x4 src/XNL.o
+ .text          0x00000000        0x0 src/ASF/avr32/utils/startup/startup_uc3.o
+ .data          0x00000000        0x0 src/ASF/avr32/utils/startup/startup_uc3.o
+ .bss           0x00000000        0x0 src/ASF/avr32/utils/startup/startup_uc3.o
+ .text          0x00000000        0x0 src/ASF/avr32/utils/startup/trampoline_uc3.o
+ .data          0x00000000        0x0 src/ASF/avr32/utils/startup/trampoline_uc3.o
+ .bss           0x00000000        0x0 src/ASF/avr32/utils/startup/trampoline_uc3.o
+ .text          0x00000000        0x0 src/ASF/common/boards/user_board/init.o
+ .data          0x00000000        0x0 src/ASF/common/boards/user_board/init.o
+ .bss           0x00000000        0x0 src/ASF/common/boards/user_board/init.o
+ .debug_abbrev  0x00000000       0x4a src/ASF/common/boards/user_board/init.o
+ .debug_info    0x00000000       0xa2 src/ASF/common/boards/user_board/init.o
+ .debug_line    0x00000000       0x5b src/ASF/common/boards/user_board/init.o
+ .text.board_init
+                0x00000000        0x2 src/ASF/common/boards/user_board/init.o
+ .debug_frame   0x00000000       0x20 src/ASF/common/boards/user_board/init.o
+ .debug_pubnames
+                0x00000000       0x21 src/ASF/common/boards/user_board/init.o
+ .debug_aranges
+                0x00000000       0x20 src/ASF/common/boards/user_board/init.o
+ .debug_ranges  0x00000000       0x18 src/ASF/common/boards/user_board/init.o
+ .debug_str     0x00000000      0x140 src/ASF/common/boards/user_board/init.o
+ .comment       0x00000000       0x31 src/ASF/common/boards/user_board/init.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x80010000         0x00040000         axrl !w
+INTRAM           0x00000004         0x00007ffc         axw !rl
+USERPAGE         0x80800000         0x00000200
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00001000                _stack_size = 0x1000
+LOAD src/accelerometer.o
+LOAD src/exception.o
+LOAD src/my_INTC.o
+LOAD src/XNL.o
+LOAD src/ASF/avr32/utils/startup/startup_uc3.o
+LOAD src/ASF/avr32/utils/startup/trampoline_uc3.o
+LOAD src/ASF/common/boards/user_board/init.o
+START GROUP
+LOAD d:/program files (x86)/atmel/studio/7.0/toolchain/avr32/avr32-gnu-toolchain/bin/../lib/gcc/avr32/4.4.7/../../../../avr32/lib/ucr2\libm.a
+END GROUP
+LOAD d:/program files (x86)/atmel/studio/7.0/toolchain/avr32/avr32-gnu-toolchain/bin/../lib/gcc/avr32/4.4.7/ucr2\libgcc.a
+LOAD d:/program files (x86)/atmel/studio/7.0/toolchain/avr32/avr32-gnu-toolchain/bin/../lib/gcc/avr32/4.4.7/../../../../avr32/lib/ucr2\libc.a
+LOAD d:/program files (x86)/atmel/studio/7.0/toolchain/avr32/avr32-gnu-toolchain/bin/../lib/gcc/avr32/4.4.7/ucr2\libgcc.a
+                0xffffffff                __max_heap_size__ = 0xffffffff
+                [0xffffffff]                __heap_size__ = DEFINED (__heap_size__)?__heap_size__:__max_heap_size__
+                [0x00001000]                __stack_size__ = DEFINED (__stack_size__)?__stack_size__:0x1000
+                0x80000000                PROVIDE (__executable_start, 0x80000000)
+                0x80000000                . = 0x80000000
+
+.interp
+ *(.interp)
+
+.reset          0x80010000     0x2008
+ *(.reset)
+ .reset         0x80010000        0x4 src/ASF/avr32/utils/startup/startup_uc3.o
+                                  0x8 (size before relaxing)
+                0x80010000                _start
+ .reset         0x80010004     0x2004 src/ASF/avr32/utils/startup/trampoline_uc3.o
+                               0x2008 (size before relaxing)
+                0x80010004                _trampoline
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+
+.rela.text
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+
+.rela.rodata
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro*)
+
+.rela.data.rel.ro
+ *(.rel.data.rel.ro*)
+
+.rel.data
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+
+.rela.data
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+
+.rel.tdata
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+
+.rela.tdata
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+
+.rel.tbss
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+
+.rela.tbss
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.bss
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x80012008     0x19fc
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text._get_interrupt_handler
+                0x80012008        0xc src/my_INTC.o
+                0x80012008                _get_interrupt_handler
+ .text.my_init_interrupts
+                0x80012014       0x34 src/my_INTC.o
+                0x80012014                my_init_interrupts
+ .text.reset_IsFillingNextU16
+                0x80012048       0x14 src/XNL.o
+                0x80012048                reset_IsFillingNextU16
+ .text.post_message
+                0x8001205c       0x24 src/XNL.o
+                0x8001205c                post_message
+ .text.XNL_PhyRx
+                0x80012080      0x1a4 src/XNL.o
+                0x80012080                XNL_PhyRx
+ .text.XNL_PhyTx
+                0x80012224      0x17c src/XNL.o
+                0x80012224                XNL_PhyTx
+ .text.RxPhyMedia
+                0x800123a0      0x470 src/XNL.o
+                0x800123a0                RxPhyMedia
+ .text._unhandled_interrupt
+                0x80012810        0x2 src/XNL.o
+ .text._external_interrupt
+                0x80012812        0x2 src/XNL.o
+ .text.reserveTxInstance
+                0x80012814       0xe4 src/XNL.o
+                0x80012814                reserveTxInstance
+ .text.findTxInstance_byOpCode
+                0x800128f8       0x3c src/XNL.o
+                0x800128f8                findTxInstance_byOpCode
+ .text.findTxInstance_byTransID
+                0x80012934       0x3c src/XNL.o
+                0x80012934                findTxInstance_byTransID
+ .text.findTxInstance_byTimeout
+                0x80012970       0x3c src/XNL.o
+                0x80012970                findTxInstance_byTimeout
+ .text.releaseTxInstance
+                0x800129ac       0xa8 src/XNL.o
+                0x800129ac                releaseTxInstance
+ .text.garbageCollect
+                0x80012a54       0x30 src/XNL.o
+                0x80012a54                garbageCollect
+ .text.sumTxInstance
+                0x80012a84       0x94 src/XNL.o
+                0x80012a84                sumTxInstance
+ .text.depleteAProcessedMessage
+                0x80012b18       0x18 src/XNL.o
+                0x80012b18                depleteAProcessedMessage
+ .text.encipher
+                0x80012b30       0x60 src/XNL.o
+                0x80012b30                encipher
+ .text.ResetRxMedia
+                0x80012b90       0x24 src/XNL.o
+                0x80012b90                ResetRxMedia
+ .text.initXNL  0x80012bb4       0xf0 src/XNL.o
+                0x80012bb4                initXNL
+ .text.processXNL_MASTER_STATUS_BRDCST
+                0x80012ca4       0xe8 src/XNL.o
+                0x80012ca4                processXNL_MASTER_STATUS_BRDCST
+ .text.processXNL_DEVICE_AUTH_KEY_REPLY
+                0x80012d8c      0x174 src/XNL.o
+                0x80012d8c                processXNL_DEVICE_AUTH_KEY_REPLY
+ .text.processXNL_DEVICE_CONN_REPLY
+                0x80012f00      0x11c src/XNL.o
+                0x80012f00                processXNL_DEVICE_CONN_REPLY
+ .text.scheduleXNL_ACK
+                0x8001301c       0xd4 src/XNL.o
+                0x8001301c                scheduleXNL_ACK
+ .text.newFlag  0x800130f0       0x14 src/XNL.o
+                0x800130f0                newFlag
+ .text.newTransID
+                0x80013104       0x1c src/XNL.o
+                0x80013104                newTransID
+ .text.sendOpcode_Not_Supported
+                0x80013120       0xf0 src/XNL.o
+                0x80013120                sendOpcode_Not_Supported
+ .text.sendTONECTRLREQ
+                0x80013210      0x10c src/XNL.o
+                0x80013210                sendTONECTRLREQ
+ .text.sendDEVINITSTS
+                0x8001331c      0x108 src/XNL.o
+                0x8001331c                sendDEVINITSTS
+ .text.processXNL_DATA_MSG_ACK
+                0x80013424       0x30 src/XNL.o
+                0x80013424                processXNL_DATA_MSG_ACK
+ .text.processXNL_DATA_MSG
+                0x80013454       0xc8 src/XNL.o
+                0x80013454                processXNL_DATA_MSG
+ .text.process_XNL
+                0x8001351c      0x198 src/XNL.o
+                0x8001351c                process_XNL
+ .text.local_start_pll0
+                0x800136b4       0x50 src/XNL.o
+                0x800136b4                local_start_pll0
+ .text.local_start_SSC
+                0x80013704       0x44 src/XNL.o
+                0x80013704                local_start_SSC
+ .text.local_start_PDC
+                0x80013748       0x6c src/XNL.o
+                0x80013748                local_start_PDC
+ .text.local_start_timer
+                0x800137b4       0x3a src/XNL.o
+                0x800137b4                local_start_timer
+ *fill*         0x800137ee        0x2 d703d703
+ .text.Delay    0x800137f0       0x1c src/XNL.o
+                0x800137f0                Delay
+ .text.Delay_ms
+                0x8001380c       0x20 src/XNL.o
+                0x8001380c                Delay_ms
+ .text.pdca_int_handler
+                0x8001382c       0xb8 src/XNL.o
+ .text.main     0x800138e4       0xe4 src/XNL.o
+                0x800138e4                main
+ .text._stext   0x800139c8       0x3c src/ASF/avr32/utils/startup/startup_uc3.o
+                                 0x50 (size before relaxing)
+                0x800139c8                _stext
+ *(.text.*personality*)
+ *(.gnu.warning)
+
+.exception      0x80013c00      0x200
+ .exception     0x80013c00      0x200 src/exception.o
+                0x80013c00                _evba
+                0x80013d3c                ipr_val
+
+.fini
+ *(.fini)
+                0x80013e00                PROVIDE (__etext, .)
+                0x80013e00                PROVIDE (_etext, .)
+                0x80013e00                PROVIDE (etext, .)
+
+.rodata         0x80013e00       0xac
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.interrupt_priority_handlers
+                0x80013e00       0x10 src/XNL.o
+                0x80013e00                interrupt_priority_handlers
+ .rodata.authKey
+                0x80013e10       0x10 src/XNL.o
+                0x80013e10                authKey
+ .rodata.DEVICE_CONN_REQUEST_PROTO
+                0x80013e20       0x1c src/XNL.o
+ .rodata.DEVINITSTSPROTO
+                0x80013e3c        0xc src/XNL.o
+ .rodata.TONECTRLREQPROTO
+                0x80013e48        0x8 src/XNL.o
+ .rodata.DEVICE_GENERIC_PROTO
+                0x80013e50       0x10 src/XNL.o
+ .rodata.priorityMapping
+                0x80013e60       0x4c src/XNL.o
+                0x80013e60                priorityMapping
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+ *(.gcc_except_table.*)
+
+.lalign         0x80013eac        0x4
+                0x80013eb0                . = ALIGN (0x8)
+ *fill*         0x80013eac        0x4 
+                0x80013eb0                PROVIDE (_data_lma, .)
+                0x00000004                . = ORIGIN (INTRAM)
+
+.dalign         0x00000004        0x4
+                0x00000008                . = ALIGN (0x8)
+ *fill*         0x00000004        0x4 
+                0x00000008                PROVIDE (_data, .)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table)
+ *(.gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+                0x00000008                PROVIDE (__preinit_array_start, ALIGN (0x4))
+
+.preinit_array
+ *(.preinit_array)
+                0x00000008                PROVIDE (__preinit_array_end, .)
+                0x00000008                PROVIDE (__init_array_start, .)
+
+.init_array
+ *(.init_array)
+                0x00000008                PROVIDE (__init_array_end, .)
+                0x00000008                PROVIDE (__fini_array_start, .)
+
+.fini_array
+ *(.fini_array)
+                0x00000008                PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin*.o(.ctors)
+ *(EXCLUDE_FILE(*crtend*.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin*.o(.dtors)
+ *(EXCLUDE_FILE(*crtend*.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local)
+ *(.data.rel.ro*)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.got)
+
+.ramtext
+ *(.ramtext .ramtext.*)
+
+.ddalign        0x00000008        0x0 load address 0x80013eb0
+                0x00000008                . = ALIGN (0x8)
+
+.data
+ *(.data .data.* .gnu.linkonce.d.*)
+ *(.gnu.linkonce.d.*personality*)
+
+.data1
+ *(.data1)
+
+.balign         0x00000008        0x0 load address 0x80013eb0
+                0x00000008                . = ALIGN (0x8)
+                0x00000008                PROVIDE (_edata, .)
+                0x00000008                PROVIDE (edata, .)
+                0x00000008                __bss_start = .
+
+.bss            0x00000008     0x4940
+ *(.dynbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ *(COMMON)
+ COMMON         0x00000008     0x493d src/XNL.o
+                0x00000008                intDuration
+                0x0000000c                theRxMediaCtrlr
+                0x0000001c                BufferIndex
+                0x0000001d                devflag
+                0x0000001e                RxMediaBuffer
+                0x00002820                bunchofrandomstatusflags
+                0x00002824                TxBlockReservation
+                0x00002834                intStartCount
+                0x00002838                theRxCirBuffer
+                0x00003838                theRxCirCtrlr
+                0x00003850                theXNL_Ctrlr
+                0x00003864                TxInstancePool
+                0x000038e4                RxBuffer
+                0x00003904                TxBufferPool
+                0x00004904                TxBuffer
+                0x00004924                txSchedule
+                0x00004944                DontPanic
+                0x00004948                . = ALIGN (0x8)
+ *fill*         0x00004945        0x3 
+                0x00004948                . = ALIGN (0x8)
+                0x00004948                _end = .
+                0x00004948                PROVIDE (end, .)
+                0x00004948                __heap_start__ = ALIGN (0x8)
+
+.heap           0x00004948     0x26b8
+ *(.heap)
+                0x000026b8                . = (__heap_size__ == __max_heap_size__)?(((ORIGIN (INTRAM) + 0x7ffc) - __stack_size__) - ABSOLUTE (.)):__heap_size__
+ *fill*         0x00004948     0x26b8 
+                0x00007000                __heap_end__ = .
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x30
+ *(.comment)
+ .comment       0x00000000       0x30 src/my_INTC.o
+                                 0x31 (size before relaxing)
+ .comment       0x00000000       0x31 src/XNL.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0x1d8
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 src/exception.o
+ .debug_aranges
+                0x00000020       0x28 src/my_INTC.o
+ .debug_aranges
+                0x00000048      0x148 src/XNL.o
+ .debug_aranges
+                0x00000190       0x28 src/ASF/avr32/utils/startup/startup_uc3.o
+ .debug_aranges
+                0x000001b8       0x20 src/ASF/avr32/utils/startup/trampoline_uc3.o
+
+.debug_pubnames
+                0x00000000      0x4a6
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x44 src/my_INTC.o
+ .debug_pubnames
+                0x00000044      0x462 src/XNL.o
+
+.debug_info     0x00000000     0x4fa0
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000       0x9d src/exception.o
+ .debug_info    0x0000009d      0x2e6 src/my_INTC.o
+ .debug_info    0x00000383     0x4ab0 src/XNL.o
+ .debug_info    0x00004e33       0xb3 src/ASF/avr32/utils/startup/startup_uc3.o
+ .debug_info    0x00004ee6       0xba src/ASF/avr32/utils/startup/trampoline_uc3.o
+
+.debug_abbrev   0x00000000      0x5a0
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0x14 src/exception.o
+ .debug_abbrev  0x00000014      0x167 src/my_INTC.o
+ .debug_abbrev  0x0000017b      0x3ff src/XNL.o
+ .debug_abbrev  0x0000057a       0x12 src/ASF/avr32/utils/startup/startup_uc3.o
+ .debug_abbrev  0x0000058c       0x14 src/ASF/avr32/utils/startup/trampoline_uc3.o
+
+.debug_line     0x00000000      0xa12
+ *(.debug_line)
+ .debug_line    0x00000000      0x13a src/exception.o
+ .debug_line    0x0000013a       0xe7 src/my_INTC.o
+ .debug_line    0x00000221      0x698 src/XNL.o
+ .debug_line    0x000008b9       0xf2 src/ASF/avr32/utils/startup/startup_uc3.o
+ .debug_line    0x000009ab       0x67 src/ASF/avr32/utils/startup/trampoline_uc3.o
+
+.debug_frame    0x00000000      0x434
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x38 src/my_INTC.o
+ .debug_frame   0x00000038      0x3fc src/XNL.o
+
+.debug_str      0x00000000     0x1bf4
+ *(.debug_str)
+ .debug_str     0x00000000      0x1d4 src/my_INTC.o
+                                0x213 (size before relaxing)
+ .debug_str     0x000001d4     0x1a20 src/XNL.o
+                               0x1c71 (size before relaxing)
+
+.debug_loc      0x00000000      0x7c7
+ *(.debug_loc)
+ .debug_loc     0x00000000       0x50 src/my_INTC.o
+ .debug_loc     0x00000050      0x777 src/XNL.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.stack          0x00007000     0x1000
+                0x00007000                _stack = .
+ *(.stack)
+                0x00001000                . = __stack_size__
+ *fill*         0x00007000     0x1000 
+                0x00008000                _estack = .
+
+.userpage
+ *(.userpage .userpage.*)
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(accelerometer_demo_6_2.elf elf32-avr32)
+
+.debug_ranges   0x00000000      0x180
+ .debug_ranges  0x00000000       0x20 src/my_INTC.o
+ .debug_ranges  0x00000020      0x140 src/XNL.o
+ .debug_ranges  0x00000160       0x20 src/ASF/avr32/utils/startup/startup_uc3.o
